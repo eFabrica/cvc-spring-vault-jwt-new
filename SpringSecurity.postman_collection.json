@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "0ab59cf4-f938-4f8f-83ff-f446968582dc",
+		"name": "SpringSecurity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Registro de usuarios",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin12\",\n    \"email\": \"user1@random.edu\",\n    \"password\": \"abc123\",\n    \"name\": \"John Doe\",\n    \"phone\": \"1234567789\",\n    \"profile\": \"ADMIN\" \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Autenticação de usuarios",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var token = responseBody;",
+									"postman.setEnvironmentVariable(\"userToken\", token.token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"user12\",\n\t\"password\": \"abc123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/users/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"users",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Ping",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWxsZXIxIiwicm9sZXMiOiJST0xFX1NFTExFUiIsImlhdCI6MTYzMzg2NDg3MSwiZXhwIjoxNjMzODgyODcxfQ.xjG5XF1flwXQ4jf7YqEB1N5HKxqV6xDcu2ToExf1ulM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/v1/users/userping",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"users",
+								"userping"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Ping",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWxsZXIxIiwicm9sZXMiOiJST0xFX1NFTExFUiIsImlhdCI6MTYzMzg2NDg3MSwiZXhwIjoxNjMzODgyODcxfQ.xjG5XF1flwXQ4jf7YqEB1N5HKxqV6xDcu2ToExf1ulM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{userToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/v1/users/adminping",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"users",
+								"adminping"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Manager ping",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWxsZXIxIiwicm9sZXMiOiJST0xFX1NFTExFUiIsImlhdCI6MTYzMzg2NDg3MSwiZXhwIjoxNjMzODgyODcxfQ.xjG5XF1flwXQ4jf7YqEB1N5HKxqV6xDcu2ToExf1ulM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/users/managerping",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"users",
+								"managerping"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Selller ping",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWxsZXIxIiwicm9sZXMiOiJST0xFX1NFTExFUiIsImlhdCI6MTYzMzg2NDg3MSwiZXhwIjoxNjMzODgyODcxfQ.xjG5XF1flwXQ4jf7YqEB1N5HKxqV6xDcu2ToExf1ulM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/users/sellerping",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"users",
+								"sellerping"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

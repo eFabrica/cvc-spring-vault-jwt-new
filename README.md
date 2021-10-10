@@ -1,2 +1,28 @@
-# cvc-spring-vault-jwt-new
-Novo template
+# Template projeot NÃO-FUNCIONAL
+
+Api de modelo com acesso ao banco / geração e validação de token / vault
+
+Framework Spring Boot contendo:
+
+	- Spring Cloud
+	- Spring Security
+	- Spring JPA
+	- Spring Swagger 2
+	- H2 Database
+	- Json JWT
+	- Lombok (1.18.22)
+
+
+---	
+### Dados carregados na inicialização
+
+Para adiantar o desenvolvimento e teste, foi adicionado um arquivo [/src/main/resources/data-h2.sql] que já adiciona 4 tipos de usuários:
+
+1. ADMIN (Administrador)
+2. MANAGER (Gerente)
+3. SELLER (Vendedor)
+4. USER (Usuario Comum)
+
+A Hieraquia de acesso segue na ordem acima.
+
+![Isso é uma imagem](bancoH2.png)
