@@ -25,4 +25,13 @@ Para adiantar o desenvolvimento e teste, foi adicionado um arquivo [/src/main/re
 
 A Hieraquia de acesso segue na ordem acima.
 
-![Isso é uma imagem](bancoH2.png)
+![Imagerm do Banco H2](bancoH2.png)
+
+
+---	
+
+Postman Collection adicionado com os endPoint's disponíveis.
+
+<a href="SpringSecurity.postman_collection.json" download>Clique aqui para Download</a>
+
+![Imagerm do Postman](Postman.png)
