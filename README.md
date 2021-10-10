@@ -1,4 +1,4 @@
-# Template projeot NÃO-FUNCIONAL
+# Template projeto NÃO-FUNCIONAL
 
 Api de modelo com acesso ao banco / geração e validação de token / vault
 
