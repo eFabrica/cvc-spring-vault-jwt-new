@@ -12,6 +12,7 @@ Framework Spring Boot contendo:
 	- Json JWT
 	- Lombok (1.18.22)
 
+Acesso para o Swagger: **http://localhost:8080/swagger-ui.html**
 
 ---	
 ### Dados carregados na inicialização
@@ -24,6 +25,8 @@ Para adiantar o desenvolvimento e teste, foi adicionado um arquivo [/src/main/re
 4. USER (Usuario Comum)
 
 A Hieraquia de acesso segue na ordem acima.
+
+Acesso para H2 Database: **http://localhost:8080/console** (usuario: sa /senha: password)
 
 ![Imagerm do Banco H2](bancoH2.png)
 
