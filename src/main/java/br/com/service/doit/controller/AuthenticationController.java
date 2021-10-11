@@ -83,7 +83,7 @@ public class AuthenticationController {
 			@ApiResponse(code = 401, message = Constants.HTTP_401),
 			@ApiResponse(code = 403, message = Constants.HTTP_403),
 			@ApiResponse(code = 500, message = Constants.HTTP_500) })
-	@PostMapping("/elk")
+	@GetMapping("/elk")
 	public ResponseEntity<String> displayElkUrl() {
 		return ResponseEntity.ok(elkUrl);
 	}
@@ -95,7 +95,7 @@ public class AuthenticationController {
 			@ApiResponse(code = 401, message = Constants.HTTP_401),
 			@ApiResponse(code = 403, message = Constants.HTTP_403),
 			@ApiResponse(code = 500, message = Constants.HTTP_500) })
-	@PostMapping("/vault")
+	@GetMapping("/vault")
 	public ResponseEntity<String> displayVaultUrl() {
 		return ResponseEntity.ok(vaultUrl);
 	}
