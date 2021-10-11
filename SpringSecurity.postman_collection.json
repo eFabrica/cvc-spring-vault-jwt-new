@@ -68,7 +68,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"username\": \"user12\",\n\t\"password\": \"abc123\"\n}",
+							"raw": "{\n\t\"username\": \"seller1\",\n\t\"password\": \"abc123\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -99,7 +99,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWxsZXIxIiwicm9sZXMiOiJST0xFX1NFTExFUiIsImlhdCI6MTYzMzg2NDg3MSwiZXhwIjoxNjMzODgyODcxfQ.xjG5XF1flwXQ4jf7YqEB1N5HKxqV6xDcu2ToExf1ulM",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWxsZXIxIiwicm9sZXMiOiJST0xFX1NFTExFUiIsImlhdCI6MTYzMzk1NTIxMSwiZXhwIjoxNjMzOTczMjExfQ.gW4ApfPDN3h99m8uhp9GLPwggmLMRCjaoNIY3jfEBBU",
 									"type": "string"
 								}
 							]
@@ -136,7 +136,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWxsZXIxIiwicm9sZXMiOiJST0xFX1NFTExFUiIsImlhdCI6MTYzMzg2NDg3MSwiZXhwIjoxNjMzODgyODcxfQ.xjG5XF1flwXQ4jf7YqEB1N5HKxqV6xDcu2ToExf1ulM",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWxsZXIxIiwicm9sZXMiOiJST0xFX1NFTExFUiIsImlhdCI6MTYzMzk1NTIxMSwiZXhwIjoxNjMzOTczMjExfQ.gW4ApfPDN3h99m8uhp9GLPwggmLMRCjaoNIY3jfEBBU",
 									"type": "string"
 								}
 							]
@@ -173,7 +173,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWxsZXIxIiwicm9sZXMiOiJST0xFX1NFTExFUiIsImlhdCI6MTYzMzg2NDg3MSwiZXhwIjoxNjMzODgyODcxfQ.xjG5XF1flwXQ4jf7YqEB1N5HKxqV6xDcu2ToExf1ulM",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWxsZXIxIiwicm9sZXMiOiJST0xFX1NFTExFUiIsImlhdCI6MTYzMzk1NTIxMSwiZXhwIjoxNjMzOTczMjExfQ.gW4ApfPDN3h99m8uhp9GLPwggmLMRCjaoNIY3jfEBBU",
 									"type": "string"
 								}
 							]
@@ -204,7 +204,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWxsZXIxIiwicm9sZXMiOiJST0xFX1NFTExFUiIsImlhdCI6MTYzMzg2NDg3MSwiZXhwIjoxNjMzODgyODcxfQ.xjG5XF1flwXQ4jf7YqEB1N5HKxqV6xDcu2ToExf1ulM",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWxsZXIxIiwicm9sZXMiOiJST0xFX1NFTExFUiIsImlhdCI6MTYzMzk1NTIxMSwiZXhwIjoxNjMzOTczMjExfQ.gW4ApfPDN3h99m8uhp9GLPwggmLMRCjaoNIY3jfEBBU",
 									"type": "string"
 								}
 							]
@@ -222,6 +222,68 @@
 								"v1",
 								"users",
 								"sellerping"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ELK",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsInJvbGVzIjoiUk9MRV9VU0VSIiwiaWF0IjoxNjMzOTU3NzkyLCJleHAiOjE2MzM5NzU3OTJ9.RMHGaFQSxundYgE5-r6ggYeNEGcPP8YFg8D1IRFigUY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/users/elk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"users",
+								"elk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vault",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsInJvbGVzIjoiUk9MRV9VU0VSIiwiaWF0IjoxNjMzOTU3NzkyLCJleHAiOjE2MzM5NzU3OTJ9.RMHGaFQSxundYgE5-r6ggYeNEGcPP8YFg8D1IRFigUY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/users/vault",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"users",
+								"vault"
 							]
 						}
 					},
