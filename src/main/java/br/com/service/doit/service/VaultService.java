@@ -6,7 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import br.com.service.doit.component.SecretVaultCVC;
-import br.com.service.doit.exception.ServiceDoiTException;
+import br.com.service.doit.exception.BusinessException;
 import br.com.service.doit.util.Constants;
 
 @Service
@@ -19,7 +19,7 @@ public class VaultService {
 	public SecretVaultCVC consultarUserPass(String username, String password) {
 
 		if (username != secretVaultCVC.getLogin() && password != secretVaultCVC.getPassword()) {
-			throw ServiceDoiTException.builder().httpStatusCode(HttpStatus.NOT_FOUND).message(Constants.NOT_FOUND).build();
+			throw BusinessException.builder().httpStatusCode(HttpStatus.NOT_FOUND).message(Constants.NOT_FOUND).build();
 		}
 		return secretVaultCVC;
 	}

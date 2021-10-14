@@ -1,2 +1,1 @@
-server:  port: 8080  spring:  datasource:    url: jdbc:h2:mem:testdb    driverClassName: org.h2.Driver    username: sa    password: password  jpa:    database-platform: org.hibernate.dialect.H2Dialect        
-
+server:  port: 8080# -- BANCO H2 DATABASE  spring:  datasource:    platform: h2    url: jdbc:h2:mem:testdb    driverClassName: org.h2.Driver    username: sa    password: password  jpa:    database-platform: org.hibernate.dialect.H2Dialect  h2:    console:      enabled: true      path: /console      settings:        web-allow-others: true          

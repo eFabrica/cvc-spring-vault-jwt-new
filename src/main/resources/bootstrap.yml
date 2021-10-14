@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: spring-vault-cvc-test
+  cloud:
+    vault:
+      token: 00000000-0000-0000-0000-000000000000
+      scheme: http
+      kv:
+        enabled: true
+      host: localhost
+      port: 8200
+
+  
+jwt:
+  token:
+    validity: 18000
+    prefix: Bearer
+  signing.key: signingkey
+  authorities.key: roles
+  header.string: Authorization
+
+cvc.url:
+  elk: http://vegas2.dyndns-server.com:5601
+  vault: http://vegas2.dyndns-server.com:8200

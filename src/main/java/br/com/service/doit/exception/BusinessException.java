@@ -14,7 +14,7 @@ import org.springframework.http.HttpStatus;
 @AllArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @EqualsAndHashCode(callSuper=false)
-public class ServiceDoiTException extends RuntimeException {
+public class BusinessException extends RuntimeException {
 
     private static final long serialVersionUID = 1L;
 
