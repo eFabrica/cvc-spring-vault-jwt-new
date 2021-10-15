@@ -1,10 +1,10 @@
-package br.com.service.servicedoit;
+package br.com.service.doit.service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ServiceDoitApplicationTests {
+class ServiceDoitApplicationTest {
 
 	@Test
 	void contextLoads() {
