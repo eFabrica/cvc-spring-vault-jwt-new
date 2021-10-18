@@ -12,6 +12,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
@@ -25,6 +26,23 @@ public class UserServiceImplTest {
 	
 	@Mock
 	private UserServiceImpl userServiceImpl;
+	
+	@Mock
+	private UserRepository userBanco;
+	
+	@Mock
+	private UserDetails detalhesUser;
+	
+	
+	@Test
+	public void testLoadByUserName() {
+		Users userTest = mock(Users.class);	
+		when(userTest.getName()).thenReturn("user1");
+		userServiceImpl.loadUserByUsername(userTest.getName());
+		
+		assertEquals(userTest.getName(), "user1");
+		
+	}
 	
 	
 	@Test
