@@ -12,7 +12,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 
 @RunWith(SpringRunner.class)
 @WebAppConfiguration
-public class RoleServiceTest {
+public class RoleServiceImplTest {
 	
 	RoleServiceImpl roleServiceT = mock(RoleServiceImpl.class);
 	
